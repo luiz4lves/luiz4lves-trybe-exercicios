@@ -1,94 +1,89 @@
-/*let patientId = 50;
+/*
+const myName = 'Luiz Antonio';
+const birthCity = 'Rio de Janeiro';
+let birthYear = 1990;
+
+birthYear = 2030;
+
+console.log(birthCity + ' ' + birthYear);
+*/
+/*
+let patientId = 50;
 let isEnrolled = true;
-const patientInf = {
-    firstName: 'Ana',
-    lastName: 'Santos',
+const patientInfo = {
+  firstName: 'Ana',
+  lastName: 'Santos',
 };
-const patientEmail = 'ana@email.com'
+const patientEmail = 'ana@email.com';
 
-console.log('patientId');
-
-
+console.log(typeof patientId);
+console.log(typeof isEnrolled);
+console.log(typeof patientInfo);
+console.log(typeof patientEmail);
+*/
+/*
 const base = 5;
 const heigth = 8;
 const area = (base * heigth);
+const perimeter = (2*base + 2*heigth)
+
 console.log(area);
-const perimeter = (2 * base + 2 * heigth);
 console.log(perimeter);
+*/
+/*
+const nota = 0;
 
-
-const note = 99;
-
-if (note >= 80) {
-    console.log('Parabéns, você foi aprovado!!');
+if (nota >= 80 && nota <= 100){
+    console.log('Parabéns, você foi aprovad@!');
 }
-else if (note < 80 && note >= 60) {
-    console.log('Você está em nossa lista de espera.');
+else if (nota < 80 && nota >= 60){
+    console.log('Você está em nossa lista de espera');
+}
+else if (nota < 60){
+    console.log('Você foi reprovad@');
 }
 else {
-    console.log('Você está REPROVADO');
+    console.log('Entre com uma nota de 0 à 100.');
 }
+*/
+/*
+const currentHour = 19;
+let message = '';
 
-const conditionOne = true;
-const conditionTwo = true;
-
-console.log(conditionOne && conditionTwo);
-
-
-const cenouras = true;
-const leite = true;
-const arroz = true;
-const feijao = true;
-
-const listaDeCompras = cenouras && leite && arroz && feijao;
-console.log(listaDeCompras);
-
-
-
-const currentHour = 5;
-let message = null;
-
-if (currentHour > 22) {
+if (currentHour >= 22){
     console.log('Não deveríamos comer nada, é hora de dormir');
 }
-else if (currentHour >= 18 && currentHour < 22) {
-    console.log('Rango da noite, vamos jantar :D');
+else if (currentHour >= 18 && currentHour < 22){
+    message = 'Rango da noite, vamos jantar :D';
 }
-else if (currentHour >=14 && currentHour < 18) {
-    console.log('Vamos fazer um bolo pro café da tarde?');
+else if (currentHour >= 14 && currentHour < 18){
+    message = 'Vamos fazer um bolo pro café da tarde?';
 }
-else if (currentHour > 11 && currentHour < 14) {
-    console.log('Hora do almoço!');
+else if (currentHour >= 11 && currentHour < 14){
+    message = 'Hora do almoço!!!';
 }
-else if (currentHour > 4 && currentHour < 11) {
-    console.log('Hmmmmm, cheirinho de café passado!');
-}
-else{
-    console.log('Horário não está entre 4 e 24');
+else if(currentHour >= 4 && currentHour < 11){
+    message = 'Hora do almoço!!!';
 }
 
 console.log(message);
+*/
+/*
+let weekDay = 'domingo';
 
-
-
-let weekDay = "sabado";
-
-if (weekDay === 'segunda-feira' || weekDay === 'terça-feira' || weekDay === 'quarta-feira' || weekDay === 'quinta-feira' || weekDay === 'sexta-feira') {
-    console.log('Dia de TRYBE')
+if (weekDay === 'segunda-feira' || weekDay === 'terça-feira' || weekDay === 'quarta-feira' || weekDay === 'quinta-feira' || weekDay === 'sexta-feira'){
+    console.log('Oba, mais um dia de aprendizado na Trybe >:D');
 }
-
-else if (weekDay === 'sabado' || weekDay === 'domingo') {
-    console.log('FINALMENTE');
+else if (weekDay === 'sábado' || weekDay === 'domingo'){
+    console.log('Finalmente!');
 }
-
-else {}
-
-
-
-
+else {
+    console.log('Entre com um dia da semana');
+}
+*/
+/*
 // Nesse exemplo o "switch/case" deverá imprimir no terminal a classificação de quais filmes podem ser assistidos
 // de acordo com a faixa etária de uma pessoa.
-
 
 let faixaEtaria = 'adulto';
 
@@ -121,11 +116,9 @@ switch (faixaEtaria) {
     console.log('só pode assistir filmes livres');
     // note que não é necessário utilizar o break após o default. Como todo o código já foi executado, não precisamos interromper o funcionamento do mesmo.
 }
-
-
-
-
-mes = 'Trybe';
+*/
+/*
+mes = 'abril';
 let estacaoDoAno = '?';
 
 switch (mes) {
@@ -151,26 +144,20 @@ switch (mes) {
 }
 
 console.log(estacaoDoAno); // 'Outono'
-
-
-let status = 'lista';
-
-switch (status){
-    case 'aprovada':
-    console.log('Aprovada!');
-    break;
-
-    case 'lista':
-    console.log('Você está em nossa lista de espera!');
-    break;
-
-    case 'reprovada':
-    console.log('Você foi reprovada.');
-    break;
-
-    default: 
-    console.log('?');
-}
-
 */
 
+let status = 'reprovada';
+
+switch (status) {
+    case 'aprovada':
+        console.log('Parabéns, você foi aprovada!');
+        break;
+    case 'lista':
+        console.log('Você está em nossa lista de espera');
+        break;
+    case 'reprovada':
+        console.log('Você foi eliminada.');
+        break;
+    default:
+        console.log('Opção inválida.');
+}
