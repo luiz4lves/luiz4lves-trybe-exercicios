@@ -1,0 +1,29 @@
+        body {
+            font-size: 16px;
+        }
+
+        h1 {
+            color: orange;
+            font-family: sans-serif;
+            font-size: 65px;
+        }
+
+        p {
+            font-weight: 600;
+            font-size: 3em;
+        }
+
+        li {
+            font-style:italic;
+            line-height: 40px;
+            text-align: center;
+            text-decoration: line-through;
+        }
+
+        .cor-da-lista-e-do-paragrafo {
+            background-color: #BE6E46;
+        }
+
+        #amarelo {background-color: yellow;}
+        #vermelho {background-color: red;}
+        #marrom {background-color: brown;}

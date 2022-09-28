@@ -1,0 +1,17 @@
+h1, p {
+    text-align: center;
+}
+
+ul:hover, ol:hover {
+    background-color: aquamarine;
+}
+
+li:active {
+    font-family: Montserrat, sans-serif;
+    color: deeppink;
+    font-size: 40px;
+}
+
+li {
+    list-style:none;
+}
