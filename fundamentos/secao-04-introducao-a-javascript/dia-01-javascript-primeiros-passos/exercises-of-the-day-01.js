@@ -96,7 +96,7 @@ switch (part){
         console.log('Peça indefinida.');
 }
 */
-
+/*
 const score = 0;
 
 if ( score >= 90 && score <= 100){
@@ -120,3 +120,76 @@ else if (score < 50 && score >=0){
 else {
     console.log('Valor incorreto.');
 }
+*/
+/*
+const numbers = [3,8,1];
+let mod = [(numbers[0]%2), (numbers[1]%2), (numbers[2]%2)];
+
+if (mod[0] == 0 || mod[1] == 0 || mod[2] == 0){
+    console.log('true');
+}
+else {
+    console.log('false');
+}
+*/
+/*
+const numbers = [2,8,2];
+let mod = [(numbers[0]%2), (numbers[1]%2), (numbers[2]%2)];
+
+if (mod[0] !== 0 || mod[1] !== 0 || mod[2] !== 0){
+    console.log('true');
+}
+else {
+    console.log('false');
+}
+*/
+/*
+const custo = 37.45;
+const venda = 65.99;
+const imposto = (custo*0.2);
+const lucro = (venda - custo + imposto);
+
+console.log('Este será o lucro com a venda de 1000 exemplares: R$' + lucro*1000);
+*/
+
+const salarioBruto = 3000.00;
+let salarioBase = 0;
+let valorIr = 0
+
+if (salarioBruto <= 1556.94){
+    salarioBase = (salarioBruto - salarioBruto*0.08);
+}
+else if (salarioBruto >= 1556.95 && salarioBruto <= 2594.92){
+    salarioBase = (salarioBruto - salarioBruto*0.09);
+}
+else if (salarioBruto >= 2594.93 && salarioBruto <= 5189.82){
+    salarioBase = (salarioBruto - salarioBruto*0.11);
+}
+else if (salarioBruto > 5189.82){
+    salarioBase = (salarioBruto - 570.88);
+}
+else {
+    console.log('Valor incorreto.');
+}
+if (salarioBase <= 1903.98){
+    valorIr = 0;
+}
+else if (salarioBase >= 1903.99 && salarioBase <= 2826.65){
+    valorIr = (salarioBase*0.075 - 142.80);
+}
+else if (salarioBase >= 2826.66 && salarioBase <= 3751.05){
+    valorIr = (salarioBase*0.15 - 354.80);
+}
+else if (salarioBase >= 3751.06 && salarioBase <= 4664.68){
+    valorIr = (salarioBase*0.225 - 636.13);
+}
+else if (salarioBase > 4664,68){
+    valorIr = (salarioBase*0.275 - 869,36);
+}
+else {
+    console.log('Valor incorreto');
+}
+console.log('Salário bruto: R$' + salarioBruto);
+console.log('Salario base: R$' + salarioBase);
+console.log('IR: R$' + valorIr);
+console.log('Salário líquido: R$' + (salarioBase - valorIr));

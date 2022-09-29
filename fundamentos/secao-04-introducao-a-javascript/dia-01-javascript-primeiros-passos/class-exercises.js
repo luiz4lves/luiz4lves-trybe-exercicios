@@ -145,7 +145,7 @@ switch (mes) {
 
 console.log(estacaoDoAno); // 'Outono'
 */
-
+/*
 let status = 'reprovada';
 
 switch (status) {
@@ -161,3 +161,4 @@ switch (status) {
     default:
         console.log('Opção inválida.');
 }
+*/
