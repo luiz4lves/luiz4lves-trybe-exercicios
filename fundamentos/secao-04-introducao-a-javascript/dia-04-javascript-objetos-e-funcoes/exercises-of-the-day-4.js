@@ -351,7 +351,7 @@
     console.log(positiveOrNegative(0));
 
  */
-
+/*
     //Faça um programa que receba três constantes com os valores dos três ângulos internos de um triângulo. Retorne true se os ângulos representarem os ângulos de um triângulo e false, caso contrário. Se algum ângulo for inválido, o programa deve retornar uma mensagem de erro.Para os ângulos serem de um triângulo válido, a soma dos três devem ser 180 graus.Um ângulo será considerado inválido se não tiver um valor positivo.
 
     function triangle(x, y, z){
@@ -370,3 +370,264 @@
     }
 
     console.log(triangle(90, 45, 45));
+*/
+/*
+
+// >>>>>>>>>>>>> EXERCÍCIOS: OBJETOS E FOR/IN
+
+//Imprima no console uma mensagem de boas-vindas para a personagem acima, incluindo seu nome. Use a sintaxe meuObjeto.chave.
+
+let info = {
+    personagem: 'Margarida',
+    origem: 'Pato Donald',
+    nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
+  };
+console.log('Bem vinda, ' + info.personagem);
+//ou
+console.log('Bem vinda, ' + info['personagem']);
+
+//Insira no objeto uma nova propriedade com o nome de chave ‘recorrente’ e o valor ‘Sim’ e, em seguida, imprima o objeto no console. Use a sintaxe meuObjeto['chave'] = valor.
+
+info.recorrente = 'Sim';
+console.log(info['recorrente']);
+
+//Faça um for/in que mostre todas as chaves do objeto.
+
+for (let index in info){
+    console.log(index);
+};
+
+//Faça um novo for/in, mas agora mostre todos os valores das chaves do objeto. 
+
+for (let index in info){
+    console.log(info[index]);
+}; 
+
+//Agora, defina um segundo objeto com a mesma estrutura (as mesmas chaves) do primeiro e os seguintes valores: ‘Tio Patinhas’, ‘Christmas on Bear Mountain, Dell’s Four Color Comics #178’, ‘O último MacPatinhas’, ‘Sim’. Então, imprima os valores de cada objeto juntos, de acordo com cada uma das chaves.
+
+let info2 = {
+    personagem: 'Tio Patinhas',
+    origem: 'Christimas on Bear Mountain, Dell' + "'s" + ' Four Color Comic #178',
+    nota: 'O último MacPatinhas',
+    recorrente: 'Sim'
+};
+
+for (let index in info){
+    if(index === 'recorrente' && info[index] === 'Sim' && info2[index] === 'Sim'){
+        console.log('Ambos recorrentes');
+}
+    else {
+        console.log(info[index] + ' e ' + info2[index]);
+    }
+};
+
+*/
+/*
+
+// >>>>>>>>>>>>> LEITURA DE OBJETOS
+
+//Acesse as chaves nome, sobrenome e titulo, que está dentro da chave livrosFavoritos, e faça um console.log no seguinte formato: “O livro favorito de Julia Pessoa se chama ‘O Pior Dia de Todos’”.
+
+let leitor = {
+    nome: 'Julia',
+    sobrenome: 'Pessoa',
+    idade: 21,
+    livrosFavoritos: [
+      {
+        titulo: 'O Pior Dia de Todos',
+        autor: 'Daniela Kopsch',
+        editora: 'Tordesilhas',
+      },
+    ],
+  };
+
+  console.log('O livro favorito de ' + leitor.nome + ' ' + leitor.sobrenome + 'se chama ' + "'" + leitor.livrosFavoritos[0].titulo + "'");
+
+  //Adicione um novo livro favorito na chave livrosFavoritos, que é um array
+
+  leitor.livrosFavoritos.push({
+    titulo: 'Harry Potter e o Prisioneiro de Azkaban',
+    autor: 'JR Rowling',
+    editora: 'Rocco',
+  });
+
+  console.log(leitor.livrosFavoritos);
+
+  //Acesse as chaves nome e livrosFavoritos e faça um console.log no seguinte formato: “Julia tem <quantidade> livros favoritos”, onde “<quantidade>” é um número gerado automaticamente pelo seu código
+
+  console.log(leitor.nome + ' tem ' + leitor.livrosFavoritos.length + ' livros favoritos.');
+
+  */
+
+  // >>>>>>>>>>>>>>>>>>>>>>>>> FUNÇÕES
+
+/*
+
+  //Crie uma função que receba uma string e retorne true se for um palíndromo, ou false, se não for.
+
+  
+  function palindromo (word) {
+    let invertedWord = '';
+    for (index = 0; index < word.length; index += 1){
+        invertedWord += word[word.length - 1 - index];
+    }
+    if (invertedWord === word){
+        return true;
+    }
+    else {
+        return false;
+    }
+  };
+  
+console.log(palindromo('arara'));
+
+//ou
+
+    function verificaPalindrome(word) {
+    for(index in word) {
+        if(word[index] != word[(word.length - 1) - index]) {
+        return false;
+        }
+    }
+    return true;
+    }
+
+console.log(verificaPalindrome('luiz'));
+
+//Outra forma de resolver o exercício é utilizando os métodos split, reverse e join. Primeiro o método split transformará a string em um array onde cada posição será uma letra da string. Depois o método reverse fará o array ficar de trás pra frente. Em seguida o método join faz com que todo o array vire uma string novamente.
+
+function verificaPalindrome(string) {
+    let reverse = string.split('').reverse().join('');
+    if (reverse === string) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  console.log(verificaPalindrome('arara'));
+  console.log(verificaPalindrome('desenvolvimento'));
+
+
+*/
+/*
+
+//Crie uma função que receba um array de inteiros e retorne o índice do maior valor
+
+function positionBigger (array){
+    let indexBigger = 0;
+    for (let index in array){
+        if (array[index] > array[indexBigger]){
+            indexBigger = index;
+        }
+    }
+    return indexBigger;
+}
+console.log(positionBigger([2, 3, 6, 7, 10, 1]));
+
+*/
+/*
+
+//Crie uma função que receba um array de inteiros e retorne o índice do menor valor.
+
+function positionSmall (array){
+    let indexBigger = 0;
+    for (let index in array){
+        if (array[index] < array[indexBigger]){
+            indexBigger = index;
+        }
+    }
+    return indexBigger;
+}
+console.log(positionSmall([2, 4, 6, 7, 10, 0, -3]));
+
+*/
+/*
+
+//Crie uma função que receba um array de nomes e retorne o nome com a maior quantidade de caracteres.
+
+function biggerWord (array){
+    let bigger = array[0];
+    for (let index = 0; index < array.length; index += 1){
+        if (array[index].length > bigger.length){
+            bigger = array[index];
+        }
+    }
+    return bigger;
+}
+console.log(biggerWord(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']));
+
+// ou
+
+function maiorPalavra(palavras) {
+    let maiorPalavra = palavras[0];
+    for (let indice in palavras) {
+      if (maiorPalavra.length < palavras[indice].length) {
+        maiorPalavra = palavras[indice];
+      }
+    }
+  
+    return maiorPalavra;
+  }
+  
+  console.log(maiorPalavra(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']));
+
+*/
+/*
+
+  //Crie uma função que receba um array de inteiros e retorne o inteiro que mais se repete.
+
+function maisRepetido (array){
+    let repeticoes = 0;
+    let vezesRepetidas = 0;
+    let indexNumeroRepetido = 0;
+
+    for (let index in array) {
+        let compara = array[index];
+        for (let index2 in array) {
+            if (compara === array[index2]){
+            repeticoes += 1;
+            }
+        }
+        if (repeticoes > vezesRepetidas) {
+            vezesRepetidas = repeticoes;
+            indexNumeroRepetido = array[index];
+        }
+        repeticoes = 0;
+    }
+    return indexNumeroRepetido;
+}
+
+console.log(maisRepetido([1, 2, 2, 3, 5, 6, 7, 7, 7, 8, 9, 3, 3, 3, 3, 3, 3, 3, 3, 3, 7, 90]));
+
+*/
+/*
+
+//Crie uma função que receba um número natural (número inteiro não negativo) N e retorne o somatório de todos os números de 1 até N.
+
+function somatorio(numero){
+    let sum = 0;
+    for (let index = 0; index <= numero; index += 1){
+        sum += index;
+    }
+    return sum;
+}
+console.log(somatorio(3));
+
+*/
+
+//Crie uma função que receba uma string word e outra string ending. Verifique se a string ending é o final da string word. Considere que a string ending sempre será menor que a string word. Valor de teste: 'trybe' e 'be' -> Valor esperado no retorno da função: true -> verificaFimPalavra('trybe', 'be'); -> Retorno esperado: true -> verificaFimPalavra('joaofernando', 'fernan'); -> Retorno esperado: false;
+
+function verificaFinal(palavra, fim){
+    palavra = palavra.split('');
+    fim = fim.split('');
+    let resposta = true;
+
+    for(let index = 0; index < fim.length; index += 1){
+        if( palavra[palavra.length - fim.length + index] != fim[index]){
+            resposta = false;
+        }
+    }
+    return resposta;
+}
+
+console.log(verificaFinal('luiz', 'iz'));
