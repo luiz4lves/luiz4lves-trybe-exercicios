@@ -1,0 +1,12 @@
+.b1 {
+    border: 2px solid red;
+    height: 100px;
+    text-align: center;
+    margin: 10px;
+}
+.b2 {
+    border: 2px solid greenyellow;
+    height: 100px;
+    text-align: center;
+    margin: 10px;
+}
