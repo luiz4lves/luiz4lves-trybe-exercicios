@@ -188,4 +188,176 @@ const checkIfElse = (age) => {
 
  */
 
-  
+// >>>>>>>>>>>>>>>>>>>>>>> EXERCÍCIOS <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+/*
+// Modifique a variável para que respeite o escopo onde está sendo declarada. Lembre-se: para que a variável respeite o escopo, ela não deve ser acessível fora do escopo em que esteja sendo declarada.
+
+      let pessoa = {
+        nome: 'Henri',
+        idade: 20
+      }
+      pessoa = {
+        nome: 'Luna',
+        idade: 19
+      }
+      console.log('Nome:', pessoa.nome);
+      console.log('Idade:', pessoa.idade);
+*/
+ /*
+// Altere o valor das propriedades do objeto, para que respeite as características da variável do tipo const: Assignment to constant variable.`
+    
+    const pessoa = {
+        nome: 'Henri',
+        idade: 20
+      }
+    // Altere essa estrutura para corrigir o erro.
+    //   pessoa.push() = {
+    //     nome: 'Luna',
+    //     idade: 19
+    //   } 
+    pessoa.nome = 'Luna';
+    pessoa.idade = 19;
+
+      console.log('Nome:', pessoa.nome);
+      console.log('Idade:', pessoa.idade);
+*/
+/*
+//Transforme a função numeroAleatorio em uma arrow function
+
+        // function numeroAleatorio() {
+        //     return Math.random()
+        // }
+        // console.log(numeroAleatorio());
+      
+        const numeroAleatorio = () => Math.random()
+        console.log(numeroAleatorio());
+ */   
+ /*
+//Transforme a função hello em uma arrow function
+        
+        // function hello(nome) {
+        //     return `Olá, ${nome}!`
+        //   }
+        //   let nome = 'Ivan';
+        //   console.log(hello(nome));
+
+        const hello = nome => `Olá, ${nome}!`
+        console.log(hello('Luiz'));
+*/
+/*
+//Transforme a função nomeCompleto em uma arrow function
+
+    // function nomeCompleto(nome, sobrenome) {
+    //     return `${nome} ${sobrenome}`
+    // }
+    // let nome = 'Ivan';
+    // let sobrenome = 'Pires';
+    // console.log(nomeCompleto(nome, sobrenome));
+
+    const nomeCompleto = (nome, sobrenome) => `${nome} ${sobrenome}`
+    console.log(nomeCompleto('Luiz Antonio', 'Alves dos Santos'));
+
+*/
+/*
+
+//Altere a expressão if/else utilizando ternary operator
+    // let speed = 90;
+    // const speedCar = (speed) => {
+    // if (speed >= 120) {
+    //     return `Você ultrapassou o limite de velocidade`;
+    // } else {
+    //     return `Você está na velocidade permitida`;
+    // }
+    // };
+    // console.log(speedCar(speed));
+
+    let speed = 90;
+    const speedCar = speed => (
+        (speed >= 120) ? `Você ultrapassou o limite de velocidade` : `Você está na velocidade permitida`
+    );
+    console.log(speedCar(speed));
+
+*/
+/*
+
+//Crie uma função que ligue e desligue um motor de um carro. 1 - Crie uma variável para armazenar o valor de status do seu motor (lembre-se de armazenar o tipo de variável da forma correta); 2 - Crie a função ligarDesligar utilizando arrow functions. Ela não receberá nenhum parâmetro; 3 - Crie a lógica para ligar e desligar o motor (a lógica deverá utilizar uma condicional para ligar e desligar o motor); 4 - Imprima no terminal “O motor está ligado“ e “O motor está desligado“ (lembre-se de utilizar o template literals nesse momento). 5 - Bônus (opcional): tente fazer o mesmo exercício utilizando ternary operator.
+
+        let status = 'desligado';
+        
+        const ligarDesligar = () => (
+            status === 'desligado' ? status = 'ligado' : status = 'desligado'
+        );
+
+        console.log(`O motor está ${ligarDesligar()}`);
+        console.log(`O motor está ${ligarDesligar()}`);
+        console.log(`O motor está ${ligarDesligar()}`);
+
+*/
+/* 
+
+// Crie uma função que calcule a área de um círculo. Na matemática, a fórmula para calcular a área de um círculo é: área = PI vezes o raio elevado ao quadrado. Com base nessa informação: 1 - Crie a função circleArea, que recebe o valor do raio como parâmetro, utilizando arrow functions; 2 - Crie uma variável para armazenar o valor de PI (lembre-se de armazenar o tipo de variável da forma correta); 3 - Crie a lógica para retornar a área do círculo; 4 - Imprima no terminal “Essa é a área do círculo: resultado da função“ (lembre-se de utilizar o template literals nesse momento).
+
+        
+        
+        const circleArea = raio => {
+            const pi = Math.PI;
+            let area = pi*Math.pow(raio, 2);
+            return console.log(`Área do circulo de raio ${raio}: ${area}`);
+        }
+        
+        circleArea(5);
+
+*/
+/*
+
+//Crie uma função que receba uma frase como parâmetro e retorne a maior palavra da frase.
+
+        const longestWord = text => {
+            let wordArray = text.split(' ');
+            let maxLength = 0;
+            let result = '';
+
+            for (const word of wordArray){
+                if (word.length > maxLength){
+                    maxLength = word.length;
+                    result = word;
+                }
+            }
+            return result;
+        }
+        console.log(longestWord('Eu estou estudando a mais de cinco horas consecutivas'));
+
+*/
+/*
+
+//Função 1: Escreva uma função que substitua a letra ‘x’ em uma frase. 1 - O nome da função deverá ser substituaX; 2 - A função deverá receber um nome por parâmetro; 3 - Declare dentro da função uma variável do tipo const, com o nome frase, atribuindo o valor 'Tryber x aqui!'; 4 - A função deverá retornar uma nova frase em que o x da frase 'Tryber x aqui!' seja substituído pelo nome passado por parâmetro.
+
+    const substituaX = (nome) => {
+        const frase = 'Tryber x aqui!';
+        const fraseArray = frase.split(' ');
+        for (let index = 0; index < fraseArray.length; index += 1) {
+        if (fraseArray[index] === 'x') {
+            fraseArray[index] = nome;
+        }
+        }  
+        return fraseArray.join(' ');
+    };
+    
+    //console.log(substituaX('Luiz'));
+
+//Função 2: Escreva uma função que irá receber o retorno da Função 1 por parâmetro e retornará uma nova string. 1 - O nome da função deverá ser minhasSkills; 2 - A função deverá receber o retorno da Função 1 - substituaX por parâmetro; 3 - Declare dentro da função uma variável com o nome skills, do tipo const; 4 - A variável skills deverá ser um array contendo três strings com tecnologias que você já aprendeu. 5 - Crie uma varável do tipo let e concatene o valor retornado da Função 1 - substituaX (utilize template literals), a frase 'Minhas três principais habilidades são:' e o valor da variável skills
+    
+        const minhasSkills = (func) => {
+        const skills = ['JavaScript', 'HTML', 'CSS'];
+        let resultado = `
+        ${func}
+      
+        Minhas três principais habilidades são:`;
+        for (let index = 0; index < skills.length; index += 1) {
+          resultado = `${resultado}
+          - ${skills[index]}`; // reatribui e adiciona a skill atual à variável resultado
+        }
+        return resultado;
+      };
+      console.log(minhasSkills(substituaX('Luiz Antonio')));
+*/
