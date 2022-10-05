@@ -14,3 +14,12 @@ function mudaCorDoQuadroVermelho(){
     fundo.style.backgroundColor = 'white'
 }
 mudaCorDoQuadroVermelho()
+
+function corrigeH1(){
+    const texto = document.getElementById('title').innerText;
+    if (texto !== 'Exercício - JavaScripit'){
+        texto = 'Exercício - JavaScripit';
+    }
+    return texto;
+}
+corrigeH1();
