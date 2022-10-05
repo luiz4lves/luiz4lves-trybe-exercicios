@@ -19,6 +19,11 @@ function corrigeH1(){
     if (document.getElementsByClassName('title')[0].innerText !== 'Exercício - JavaScripit'){
         document.getElementsByClassName('title')[0].innerText = 'Exercício - JavaScripit';
     }
-    return texto;
 }
 corrigeH1();
+
+function maiusculas(){
+    let texto = document.querySelector('.center-content p');
+    texto.innerText = texto.innerText.toUpperCase();
+}
+maiusculas();
