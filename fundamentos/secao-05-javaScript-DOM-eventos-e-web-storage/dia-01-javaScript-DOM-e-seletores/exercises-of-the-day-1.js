@@ -3,8 +3,14 @@ function mudaTexto(){
 }
 mudaTexto ();
 
-function mudaCor(){
+function mudaCorDoQuadroAmarelo(){
     const fundo = document.getElementsByClassName('main-content')[0];
     fundo.style.backgroundColor = 'rgb(76,164,109)' 
 }
-mudaCor();
+mudaCorDoQuadroAmarelo();
+
+function mudaCorDoQuadroVermelho(){
+    const fundo = document.getElementsByClassName('center-content')[0];
+    fundo.style.backgroundColor = 'white'
+}
+mudaCorDoQuadroVermelho()
