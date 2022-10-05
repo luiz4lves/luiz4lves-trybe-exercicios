@@ -27,3 +27,11 @@ function maiusculas(){
     texto.innerText = texto.innerText.toUpperCase();
 }
 maiusculas();
+
+function exibeTudo(){
+    const array = document.getElementsByTagName('p');
+    for (let index = 0; index < array.length; index += 1){
+        console.log(array[index].innerHTML);
+    }
+}
+exibeTudo();
