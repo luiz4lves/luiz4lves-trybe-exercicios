@@ -5,20 +5,19 @@ mudaTexto ();
 
 function mudaCorDoQuadroAmarelo(){
     const fundo = document.getElementsByClassName('main-content')[0];
-    fundo.style.backgroundColor = 'rgb(76,164,109)' 
+    return fundo.style.backgroundColor = 'rgb(76,164,109)' 
 }
 mudaCorDoQuadroAmarelo();
 
 function mudaCorDoQuadroVermelho(){
     const fundo = document.getElementsByClassName('center-content')[0];
-    fundo.style.backgroundColor = 'white'
+    return fundo.style.backgroundColor = 'white'
 }
 mudaCorDoQuadroVermelho()
 
 function corrigeH1(){
-    const texto = document.getElementById('title').innerText;
-    if (texto !== 'Exercício - JavaScripit'){
-        texto = 'Exercício - JavaScripit';
+    if (document.getElementsByClassName('title')[0].innerText !== 'Exercício - JavaScripit'){
+        document.getElementsByClassName('title')[0].innerText = 'Exercício - JavaScripit';
     }
     return texto;
 }
