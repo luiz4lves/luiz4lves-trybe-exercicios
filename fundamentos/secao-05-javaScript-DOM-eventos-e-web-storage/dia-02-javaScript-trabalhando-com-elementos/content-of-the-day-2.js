@@ -23,13 +23,16 @@
 
 // previousElementSibling: retorna o elemento anterior.
 
-//Primeiro, foi selecionado o elemento div utilizando o seu id, ‘start’. Na sequência, aplicadas as propriedades nextSibling e nextElementSibling. Você pode ver que nextSibling retornará o texto “nó” que representa o próximo nó do DOM a partir da div, enquanto nextElementSibling retornará o próximo elemento propriamente, ou seja, o elemento <p>.
+*/
+
+//>>>>>>>>>>>>>>>> PARTE I <<<<<<<<<<<<<<<<<<<<<<<<<<<<
+/*
 
 console.log(document.getElementById('start').nextSibling);
 console.log(document.getElementById('start').nextElementSibling);
 
-*/
-/*
+//Primeiro, foi selecionado o elemento div utilizando o seu id, ‘start’. Na sequência, aplicadas as propriedades nextSibling e nextElementSibling. Você pode ver que nextSibling retornará o texto “nó” que representa o próximo nó do DOM a partir da div, enquanto nextElementSibling retornará o próximo elemento propriamente, ou seja, o elemento <p>.
+
 
 // Acesse o elemento elementoOndeVoceEsta.
 
@@ -65,3 +68,55 @@ console.log(pai.lastElementChild.previousElementSibling);
 
 */
 
+//>>>>>>>>>>>>>>>> PARTE II <<<<<<<<<<<<<<<<<<<<<<<<<<<<
+/*
+
+// Crie um irmão para elementoOndeVoceEsta.
+
+const pai = document.getElementById('pai');
+const novoIrmao = document.createElement('section');
+novoIrmao.id = 'irmaoMaisNovo';
+pai.appendChild(novoIrmao);
+console.log(document.getElementById('pai'));
+
+// Crie um filho para elementoOndeVoceEsta.
+
+const filho = document.getElementById('elementoOndeVoceEsta');
+const novoFilho = document.createElement('section');
+novoFilho.id = 'filhoMaisNovo';
+filho.appendChild(novoFilho);
+
+// Crie um filho para primeiroFilhoDoFilho.
+
+const filhoDoFilhoDoFilho = document.getElementById('primeiroFilhoDoFilho');
+const outroFilho = document.createElement('section');
+outroFilho.id = 'filhoDoFilhoDoFilho';
+filhoDoFilhoDoFilho.appendChild(outroFilho);
+
+// A partir desse filho criado, acesse terceiroFilho.
+
+console.log(filhoDoFilhoDoFilho.parentElement.nextElementSibling);
+*/
+
+//>>>>>>>>>>>>>>>> PARTE III <<<<<<<<<<<<<<<<<<<<<<<<<<<<
+/*
+
+// Remova todos os elementos filhos de paiDoPai exceto pai, elementoOndeVoceEsta e primeiroFilhoDoFilho.
+
+let pai = document.getElementById('pai');
+const todosOsFilhos = pai.childNodes;
+
+for(let index = todosOsFilhos.length -1 ; index >= 0; index -= 1){
+    const filhoAtual = todosOsFilhos[index];
+    if(filhoAtual.id !== 'elementoOndeVoceEsta'){
+        filhoAtual.remove();
+    }
+}
+const segundoEUltimoFilho = document.getElementById('segundoEUltimoFilhoDoFilho');
+segundoEUltimoFilho.remove();
+
+console.log(paiDoPai);
+
+//>> OBS.: só funcionou utilizando o decremento de "index"
+
+*/
