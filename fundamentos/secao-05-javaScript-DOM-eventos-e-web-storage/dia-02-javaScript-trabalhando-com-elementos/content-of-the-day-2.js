@@ -69,7 +69,7 @@ console.log(pai.lastElementChild.previousElementSibling);
 */
 
 //>>>>>>>>>>>>>>>> PARTE II <<<<<<<<<<<<<<<<<<<<<<<<<<<<
-/*
+
 
 // Crie um irmão para elementoOndeVoceEsta.
 
@@ -77,7 +77,7 @@ const pai = document.getElementById('pai');
 const novoIrmao = document.createElement('section');
 novoIrmao.id = 'irmaoMaisNovo';
 pai.appendChild(novoIrmao);
-console.log(document.getElementById('pai'));
+console.log(pai);
 
 // Crie um filho para elementoOndeVoceEsta.
 
@@ -96,7 +96,7 @@ filhoDoFilhoDoFilho.appendChild(outroFilho);
 // A partir desse filho criado, acesse terceiroFilho.
 
 console.log(filhoDoFilhoDoFilho.parentElement.nextElementSibling);
-*/
+
 
 //>>>>>>>>>>>>>>>> PARTE III <<<<<<<<<<<<<<<<<<<<<<<<<<<<
 /*
