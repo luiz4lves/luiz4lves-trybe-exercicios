@@ -15,7 +15,7 @@ function addElement(element){
     container.appendChild(createElement(element));
 }
 
-let features = ['green square small', 'red circle small', 'yellow square small'];
+let features = ['green square small', 'red circle small', 'yellow square small', 'green circle small'];
 
 for (let i = 0; i < features.length; i += 1){
     addElement(features[i]);
