@@ -49,3 +49,13 @@ function dias(){
 }
 dias();
   
+function buttonHoliday(buttonName){
+  const containerButton = document.getElementsByClassName('buttons-container')[0];
+  const button = document.createElement('button');
+  button.id = 'btn-holiday';
+  button.innerText = buttonName;
+
+  containerButton.appendChild(button);
+}
+
+buttonHoliday('Feriado');
