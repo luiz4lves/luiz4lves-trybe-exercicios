@@ -93,7 +93,7 @@ function changeColorHolidays(){
   const divButtonHoliday = document.getElementsByTagName('button')[0];
   const allHolidays = document.getElementsByClassName('holiday');
   const backgroundColorInitial = 'rgb(238,238,238)';
-  const backgroundColorChange = 'purple';
+  const backgroundColorChange = 'pink';
   
   divButtonHoliday.addEventListener('click', function() {
     for(let index = 0; index < allHolidays.length; index += 1){
@@ -269,7 +269,7 @@ colorDayTask();
 // Ao pressionar a tecla “enter” o evento também deverá ser disparado.
 // Dica - Propriedade: key.
 
-function compromissos(){
+function commitments(){
   const getInputField = document.getElementById('task-input');
   const addInputButton = document.getElementById('btn-add');
   const getTaskList = document.getElementsByClassName('task-list')[0];
@@ -296,4 +296,4 @@ function compromissos(){
     }
   })
 }
-compromissos();
+commitments();
