@@ -17,7 +17,7 @@ function addOrRemoveClass(event){
     const li = document.querySelector('.tech');
     li.classList.remove('tech');
     event.target.classList.add('tech');
-    input.value = '';
+    // input.value = '';
     console.log(document.getElementsByTagName('li'));
 }
 
